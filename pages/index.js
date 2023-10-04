@@ -7,8 +7,6 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json());
 export default function SpotlightPage() {
   const { data } = useSWR(API_URL, fetcher);
 
-  console.log("DATA ", JSON.stringify(data));
-
   return (
     <div>
       <ArtPieces pieces={data} />
